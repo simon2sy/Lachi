@@ -2000,3 +2000,399 @@ textarea.input-field {
   .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
 
 }
+
+
+/*-----------------------------------*\
+  #MOBILE OPTIMIZATION
+\*-----------------------------------*/
+
+/* Mobile Navigation Menu */
+@media (max-width: 767px) {
+  
+  /* Header */
+  .header .container {
+    padding: 12px 15px;
+  }
+
+  .logo {
+    font-size: 2.4rem;
+  }
+
+  .lodge-name {
+    font-size: 1rem;
+    margin-top: -3px;
+  }
+
+  /* Mobile Navigation */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 80px 30px 30px;
+  }
+
+  .navbar.active {
+    left: 0;
+    height: 100vh;
+    visibility: visible;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid var(--gainsboro);
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-link {
+    font-size: 1.6rem;
+    padding: 15px 0;
+    color: var(--rich-black-fogra-29);
+    font-weight: var(--fw-500);
+  }
+
+  .navbar-link:hover {
+    color: var(--deep-saffron);
+    padding-left: 10px;
+    transition: all 0.3s ease;
+  }
+
+  /* Nav Toggle Button */
+  .nav-toggle-btn {
+    z-index: 1001;
+  }
+
+  .nav-toggle-btn .line {
+    transition: all 0.3s ease;
+  }
+
+  .nav-toggle-btn.active .top {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav-toggle-btn.active .middle {
+    opacity: 0;
+  }
+
+  .nav-toggle-btn.active .bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Overlay for mobile menu */
+  .header::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .header.menu-open::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: 500px;
+    padding: 80px 0 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .hero-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .hero-banner {
+    display: none;
+  }
+
+  /* Section Styles */
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+  }
+
+  .section-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  /* Promo Section */
+  .promo-list {
+    gap: 15px;
+  }
+
+  .promo-card {
+    padding: 15px;
+  }
+
+  .card-banner {
+    margin-bottom: 15px;
+  }
+
+  .promo-card .card-title {
+    font-size: 1.6rem;
+  }
+
+  /* About Section */
+  .about .container {
+    gap: 30px;
+  }
+
+  .about-banner {
+    text-align: center;
+  }
+
+  .about-img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .about-item {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .about-item .item-icon {
+    font-size: 2.4rem;
+    min-width: 40px;
+  }
+
+  .about-item .item-title {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+  }
+
+  .about-item .item-text {
+    font-size: 1.3rem;
+  }
+
+  /* Food Menu */
+  .food-menu-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .food-menu-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .food-menu-card .card-title {
+    font-size: 1.8rem;
+  }
+
+  .food-menu-card .price {
+    font-size: 1.8rem;
+  }
+
+  /* CTA Section */
+  .cta .container {
+    text-align: center;
+  }
+
+  .cta-banner {
+    margin-bottom: 30px;
+  }
+
+  .cta-img {
+    max-width: 100%;
+  }
+
+  .cta .section-title {
+    font-size: 2.4rem;
+  }
+
+  /* Delivery Section */
+  .delivery {
+    text-align: center;
+  }
+
+  .delivery .section-title {
+    font-size: 2.4rem;
+  }
+
+  .delivery .section-text {
+    font-size: 1.4rem;
+  }
+
+  .delivery-boy {
+    max-width: 150px;
+    margin: 20px auto 0;
+  }
+
+  /* Testimonials */
+  .testi-list {
+    gap: 20px;
+  }
+
+  .testi-item {
+    padding: 25px 20px;
+  }
+
+  .testi-item .item-text {
+    font-size: 1.4rem;
+  }
+
+  .testi-item .item-title {
+    font-size: 1.6rem;
+  }
+
+  /* Contact Section */
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-body {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .input-field {
+    padding: 12px 15px;
+    font-size: 1.4rem;
+  }
+
+  .contact-form textarea {
+    min-height: 120px;
+  }
+
+  /* Footer */
+  .footer-top .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-list-title {
+    margin-inline: auto;
+    margin-bottom: 15px;
+  }
+
+  .footer-list {
+    text-align: center;
+  }
+
+  .footer-list address {
+    max-width: none;
+  }
+
+  .footer-form {
+    padding: 25px 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-bottom-list {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Back to Top Button */
+  .back-top-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 12px 25px;
+    font-size: 1.4rem;
+  }
+
+  .btn-link {
+    font-size: 1.4rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 374px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .lodge-name {
+    font-size: 0.9rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .navbar {
+    width: 85%;
+  }
+}

@@ -1,6 +1,6 @@
 export default function Header({ isNavActive, isHeaderSticky, onToggleNav, onCloseNav }) {
   return (
-    <header className={`header${isHeaderSticky ? ' active' : ''}`} data-header>
+    <header className={`header${isHeaderSticky ? ' active' : ''}${isNavActive ? ' menu-open' : ''}`} data-header>
       <div className="container">
 
         <h1>
