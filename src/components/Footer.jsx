@@ -70,7 +70,7 @@ export default function Footer() {
             </li>
 
             <li>
-              <address className="footer-list-item">New Baneshwor, Kathmandu, Nepal</address>
+              <address className="footer-list-item">Bhadrapur-10, Jhapa, Nepal</address>
             </li>
 
           </ul>

@@ -1,0 +1,241 @@
+/* Professional Loading Screen */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loading-screen.fade-out {
+  animation: fadeOut 0.8s ease-in forwards;
+}
+
+.loading-content {
+  text-align: center;
+  animation: scaleIn 0.6s ease-out;
+}
+
+/* Logo Animation */
+.loading-logo {
+  font-family: var(--ff-rubik);
+  font-size: 4.5rem;
+  font-weight: var(--fw-700);
+  color: var(--white);
+  letter-spacing: -3px;
+  margin-bottom: 30px;
+  animation: slideUp 0.8s ease-out 0.2s both;
+  opacity: 0;
+}
+
+.loading-dot {
+  color: var(--deep-saffron);
+  display: inline-block;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+/* Spinner */
+.loading-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  animation: rotateIn 0.8s ease-out 0.4s both;
+  opacity: 0;
+}
+
+.spinner-ring {
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+
+.spinner-ring:nth-child(1) {
+  border-top-color: var(--deep-saffron);
+  animation: spin 1.2s linear infinite;
+}
+
+.spinner-ring:nth-child(2) {
+  border-right-color: var(--dark-orange);
+  animation: spin 1.5s linear infinite reverse;
+  inset: 8px;
+}
+
+.spinner-ring:nth-child(3) {
+  border-bottom-color: var(--champagne-pink);
+  animation: spin 2s linear infinite;
+  inset: 16px;
+}
+
+/* Loading Text */
+.loading-text {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: var(--fw-500);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: slideUp 0.8s ease-out 0.6s both, textGlow 2s ease-in-out infinite;
+  opacity: 0;
+}
+
+/* Decorative Elements */
+.loading-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-180deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 165, 0, 0.6), 0 0 30px rgba(255, 165, 0, 0.3);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Loading Progress Bar */
+.loading-progress {
+  width: 200px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin: 0 auto 25px;
+  overflow: hidden;
+  animation: slideUp 0.8s ease-out 0.5s both;
+  opacity: 0;
+}
+
+.loading-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--deep-saffron), var(--dark-orange), var(--deep-saffron));
+  background-size: 200% 100%;
+  border-radius: 2px;
+  transition: width 0.1s linear;
+  animation: progressShine 1.5s linear infinite;
+}
+
+@keyframes progressShine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .loading-logo {
+    font-size: 3.2rem;
+  }
+  
+  .loading-spinner {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .loading-text {
+    font-size: 1.3rem;
+  }
+  
+  .loading-progress {
+    width: 150px;
+  }
+}
