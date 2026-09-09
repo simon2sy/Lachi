@@ -40,26 +40,14 @@ export default function Footer() {
             <ul className="social-list">
 
               <li>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1DDV4Z27f4/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
               </li>
 
               <li>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Twitter">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Pinterest">
-                  <ion-icon name="logo-pinterest"></ion-icon>
+                <a href="https://www.tiktok.com/@lachi_bypradhanlo?_r=1&_t=ZS-99a9yhH3qfh" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="TikTok">
+                  <ion-icon name="logo-tiktok"></ion-icon>
                 </a>
               </li>
 

@@ -1,7 +1,7 @@
 export default function About() {
   const scrollToMenu = (e) => {
     e.preventDefault()
-    const menu = document.getElementById('food-menu')
+    const menu = document.getElementById('menu')
     if (menu) {
       menu.scrollIntoView({ behavior: 'smooth' })
     }

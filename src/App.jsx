@@ -8,6 +8,7 @@ import About from './components/About'
 import FoodMenu from './components/FoodMenu'
 import CTA from './components/CTA'
 import Delivery from './components/Delivery'
+import Bar from './components/Bar'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -72,6 +73,7 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [deliveryBoyMove])
 
+  // Lock body scroll while the mobile nav is open, close on Escape / desktop resize
   const toggleNav = useCallback(() => {
     setIsNavActive(prev => !prev)
   }, [])
@@ -79,6 +81,29 @@ function App() {
   const closeNav = useCallback(() => {
     setIsNavActive(false)
   }, [])
+
+  useEffect(() => {
+    if (!isNavActive) return
+
+    document.body.classList.add('nav-open')
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') closeNav()
+    }
+
+    const handleResize = () => {
+      if (window.innerWidth >= 992) closeNav()
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      document.body.classList.remove('nav-open')
+      window.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [isNavActive, closeNav])
 
   return (
     <>
@@ -95,8 +120,11 @@ function App() {
           <Promo />
           <About />
           <FoodMenu />
+          <Bar />
           <CTA />
+          
           <Delivery deliveryBoyRef={deliveryBoyRef} deliveryBoyMove={deliveryBoyMove} />
+          
           <Testimonials />
           <Contact />
         </article>

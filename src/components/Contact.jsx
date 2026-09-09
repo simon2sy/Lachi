@@ -47,7 +47,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="section contact" id="contact-section">
+    <section className="section contact" id="contact">
       <div className="container">
 
         <p className="section-subtitle" data-aos="fade-up">Get In Touch</p>
@@ -80,7 +80,7 @@ export default function Contact() {
 
           <div className="contact-map" data-aos="fade-right" data-aos-duration="1000">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!4v1788698661478!6m8!1m7!1smjW4KHM5e9-DsQYo83n_QQ!2m2!1d26.57117679671469!2d88.06835594873108!3f259.2857179362318!4f5.949519526649681!5f0.7820865974627469"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1784.2147059073113!2d88.068302!3d26.5705924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e5af6ff2192acf%3A0x416af7cdda523a40!2sLACHI%20BY%20PRADHAN%20LODGE!5e0!3m2!1sen!2snp!4v1788944291315!5m2!1sen!2snp"
               width="600"
               height="450"
               style={{ border: 0, borderRadius: '8px', width: '100%', height: '100%' }}
