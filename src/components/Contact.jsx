@@ -4,7 +4,7 @@ const contactDetails = [
   {
     icon: 'location-outline',
     title: 'Our Location',
-    lines: ['New Baneshwor, Kathmandu', 'Nepal 44600'],
+    lines: ['Bhadrapur-10, Jhapa', 'Nepal'],
   },
   {
     icon: 'call-outline',
