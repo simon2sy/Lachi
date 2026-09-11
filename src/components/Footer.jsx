@@ -86,15 +86,10 @@ export default function Footer() {
             </li>
 
             <li>
-              <p className="footer-list-item">Sunday–Friday: 11:00–22:00</p>
+              <p className="footer-list-item">Every day: 07:00–21:00</p>
             </li>
 
             <li>
-              <p className="footer-list-item">Saturday: 10:00–23:00</p>
-            </li>
-
-            <li>
-              <p className="footer-list-item">Public Holidays: 12:00–21:00</p>
             </li>
 
           </ul>

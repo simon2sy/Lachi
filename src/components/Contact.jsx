@@ -19,7 +19,7 @@ const contactDetails = [
   {
     icon: 'time-outline',
     title: 'Opening Hours',
-    lines: ['Sun–Fri: 11 AM – 10 PM', 'Saturday: 10 AM – 11 PM'],
+    lines: ['Every day: 7 AM – 9 PM'],
   },
 ]
 
