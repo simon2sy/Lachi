@@ -24,7 +24,7 @@ export default function About() {
           </h2>
 
           <p className="section-text">
-            Born in the heart of Kathmandu, Lachi brings you the authentic flavors of Nepali cuisine. Our recipes have been passed down through generations, blending traditional spices with modern culinary artistry.
+            Born in the heart of Bhadrapur, Lachi brings you the authentic flavors of Nepali cuisine. Our recipes have been passed down through generations, blending traditional spices with modern culinary artistry.
           </p>
 
           <ul className="about-list">
@@ -44,10 +44,7 @@ export default function About() {
               <span className="span">Warm Nepali Hospitality</span>
             </li>
 
-            <li className="about-item">
-              <ion-icon name="checkmark-outline"></ion-icon>
-              <span className="span">Fast Home Delivery</span>
-            </li>
+            
 
           </ul>
 

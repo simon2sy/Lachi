@@ -10,7 +10,7 @@ export default function Delivery({ deliveryBoyRef, deliveryBoyMove }) {
           </h2>
 
           <p className="section-text">
-            Whether you're in the busy streets of Thamel or the quiet lanes of Patan, our delivery team brings the taste of Lachi straight to your doorstep — fast, hot, and fresh.
+            Whether you're in the heart of Bhadrapur or the nearby corners of Jhapa, our delivery team brings the taste of Lachi straight to your doorstep — fast, hot, and fresh.
           </p>
 
         </div>

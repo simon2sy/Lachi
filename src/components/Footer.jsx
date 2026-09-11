@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+const whatsappNumber = '9779842692212'
+
 export default function Footer() {
   const [formData, setFormData] = useState({
     full_name: '',
@@ -16,6 +18,20 @@ export default function Footer() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const whatsappMessage = [
+      'New table booking request for Lachi',
+      `Name: ${formData.full_name}`,
+      `Email: ${formData.email_address}`,
+      `Guests: ${formData.total_person}`,
+      `Date: ${formData.booking_date || 'Not provided'}`,
+      `Message: ${formData.message}`,
+    ].join('\n')
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+      '_blank',
+      'noopener,noreferrer',
+    )
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)
@@ -70,7 +86,7 @@ export default function Footer() {
             </li>
 
             <li>
-              <p className="footer-list-item">info@lachi.com.np</p>
+              <p className="footer-list-item">shresthaindira479@gmail.com</p>
             </li>
 
             <li>

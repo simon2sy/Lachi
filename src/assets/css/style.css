@@ -2480,16 +2480,34 @@ textarea.input-field {
     gap: 15px;
   }
 
-  .promo-card {
-    padding: 15px;
+  .promo-item {
+    min-width: 84%;
   }
 
-  .card-banner {
-    margin-bottom: 15px;
+  .promo-card {
+    padding: 20px 16px;
+    border-radius: 10px;
+  }
+
+  .promo-card .card-icon svg {
+    width: 44px;
+    height: 44px;
   }
 
   .promo-card .card-title {
     font-size: 1.6rem;
+    margin-block: 10px;
+  }
+
+  .promo-card .card-text {
+    font-size: 1.3rem;
+    line-height: 1.45;
+    margin-block-end: 12px;
+  }
+
+  .promo-card .card-banner {
+    width: min(100%, 180px);
+    margin-bottom: 0;
   }
 
   /* About Section */

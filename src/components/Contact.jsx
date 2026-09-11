@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+const whatsappNumber = '9779842692212'
+
 const contactDetails = [
   {
     icon: 'location-outline',
@@ -14,7 +16,7 @@ const contactDetails = [
   {
     icon: 'mail-outline',
     title: 'Email',
-    lines: ['info@lachi.com.np', 'reservations@lachi.com.np'],
+    lines: ['shresthaindira479@gmail.com'],
   },
   {
     icon: 'time-outline',
@@ -39,6 +41,20 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const whatsappMessage = [
+      'New message for Lachi',
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone || 'Not provided'}`,
+      `Subject: ${formData.subject}`,
+      `Message: ${formData.message}`,
+    ].join('\n')
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+      '_blank',
+      'noopener,noreferrer',
+    )
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)
