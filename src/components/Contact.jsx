@@ -9,7 +9,7 @@ const contactDetails = [
   {
     icon: 'call-outline',
     title: 'Phone',
-    lines: ['+977-1-425678', '+977-9801234567'],
+    lines: ['+977 9842692212', '+977 9862751525'],
   },
   {
     icon: 'mail-outline',

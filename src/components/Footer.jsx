@@ -62,7 +62,11 @@ export default function Footer() {
             </li>
 
             <li>
-              <p className="footer-list-item">+977-1-425678</p>
+              <p className="footer-list-item">+977 9842692212</p>
+            </li>
+
+            <li>
+              <p className="footer-list-item">+977 9862751525</p>
             </li>
 
             <li>
