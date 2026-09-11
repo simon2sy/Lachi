@@ -86,7 +86,7 @@ export default function Footer() {
             </li>
 
             <li>
-              <p className="footer-list-item">Every day: 07:00–21:00</p>
+              <p className="footer-list-item">Every day: 7 am to 9 pm</p>
             </li>
 
             <li>
