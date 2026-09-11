@@ -1,6 +1,7 @@
 const navItems = [
   { href: '#home', label: 'Home', icon: 'home-outline' },
   { href: '#about', label: 'About', icon: 'information-circle-outline' },
+  { href: '#gallery', label: 'Gallery', icon: 'images-outline' },
   { href: '#menu', label: 'Menu', icon: 'restaurant-outline' },
   { href: '#contact', label: 'Contact', icon: 'call-outline' },
 ]

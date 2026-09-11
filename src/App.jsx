@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Promo from './components/Promo'
 import About from './components/About'
+import Gallery from './components/Gallery'
 import FoodMenu from './components/FoodMenu'
 import CTA from './components/CTA'
 import Delivery from './components/Delivery'
@@ -119,6 +120,7 @@ function App() {
           <Hero />
           <Promo />
           <About />
+          <Gallery />
           <FoodMenu />
           <Bar />
           <CTA />
