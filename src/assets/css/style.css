@@ -2168,17 +2168,7 @@ textarea.input-field {
   }
 
   .gallery-overlay {
-    opacity: 1;
-    padding: 14px 12px;
-  }
-
-  .gallery-category {
-    font-size: 0.9rem;
-    padding: 3px 8px;
-  }
-
-  .gallery-caption {
-    font-size: 1.2rem;
+    display: none;
   }
   
   /* Header - transparent over hero section */
