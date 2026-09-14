@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const filters = ['All']
+const filters = ['All', 'Momos', 'Snacks', 'Curry', 'Drinks']
 
 const foodItems = [
   { name: 'Steamed Momo', category: 'Momos', price: 'Rs 150', oldPrice: 'Rs 200', discount: '-25%', img: '/assets/images/steammomo.png', alt: 'Steamed Momo', description: 'Handmade dumplings stuffed with seasoned buffalo meat, served with spicy tomato achar.' },
@@ -8,6 +8,9 @@ const foodItems = [
   { name: 'Veg Pokora', category: 'Snacks', price: 'Rs 120', img: '/assets/images/veg pokora.png', alt: 'Veg Pokora', description: 'Crispy vegetable fritters coated in a light, spiced batter and served hot.' },
   { name: 'Panner Pokora', category: 'Snacks', price: 'Rs 180', img: '/assets/images/panner pokora.png', alt: 'Panner Pokora', description: 'Golden paneer fritters with a crisp outside and a soft, flavourful centre.' },
   { name: 'Thukpa', category: 'Curry', price: 'Rs 180', oldPrice: 'Rs 250', discount: '-28%', img: '/assets/images/thukpa.png', alt: 'Thukpa', description: 'Hearty Tibetan-style noodle soup with fresh vegetables and tender chicken — perfect for cold evenings.' },
+  { name: 'Mojito', category: 'Drinks', price: 'Rs 180', img: '/assets/images/Drinks/mojito.jpeg', alt: 'Mojito', description: 'A refreshing blend of lime, mint, and sparkling sweetness.' },
+  { name: 'Blue Angel', category: 'Drinks', price: 'Rs 200', img: '/assets/images/Drinks/blue angel.jpeg', alt: 'Blue Angel drink', description: 'A bright, cool blue mocktail with a smooth and refreshing finish.' },
+  { name: 'Black Ocean', category: 'Drinks', price: 'Rs 200', img: '/assets/images/Drinks/blackocean.png', alt: 'Black Ocean drink', description: 'A bold, chilled signature drink with a deep colour and rich flavour.' },
 ]
 
 function StarRating() {
@@ -53,7 +56,9 @@ export default function FoodMenu() {
         </ul>
 
         <ul className="food-menu-list">
-          {foodItems.map((item, index) => (
+          {foodItems
+            .filter(item => activeFilter === 'All' || item.category === activeFilter)
+            .map((item, index) => (
             <li key={index} data-aos="fade-up" data-aos-delay={index * 100}>
               <div className="food-menu-card">
 

@@ -23,9 +23,9 @@ export default function Header({ isNavActive, isHeaderSticky, onToggleNav, onClo
 
         <h1 className="logo-wrap">
           <a href="#top" className="logo" onClick={onCloseNav}>
-            Lachi<span className="span">.</span>
+            Lachi<span className="span"></span>
           </a>
-          <span className="lodge-name">by Pradhan Lodge</span>
+          <span className="lodge-name">By Pradhan Lodge</span>
         </h1>
 
         <nav
