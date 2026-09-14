@@ -4,7 +4,7 @@ const filters = ['All', 'Momos', 'Snacks', 'Curry', 'Drinks']
 
 const foodItems = [
   { name: 'Steamed Momo', category: 'Momos', price: 'Rs 150', oldPrice: 'Rs 200', discount: '-25%', img: '/assets/images/steammomo.png', alt: 'Steamed Momo', description: 'Handmade dumplings stuffed with seasoned buffalo meat, served with spicy tomato achar.' },
-  { name: 'Jhol Momo', category: 'Momos', price: 'Rs 180', oldPrice: 'Rs 250', discount: '-28%', img: '/assets/images/jhol momo.png', alt: 'Jhol Momo', description: 'Momo drowned in a tangy sesame and tomato-based soup — a Kathmandu street-food legend.' },
+  { name: 'Jhol Momo', category: 'Momos', price: 'Rs 180', oldPrice: 'Rs 250', discount: '-28%', img: '/assets/images/jhol momo.png', alt: 'Jhol Momo', description: 'Momo drowned in a tangy sesame and tomato-based soup — a beloved Nepali street-food favorite.' },
   { name: 'Veg Pokora', category: 'Snacks', price: 'Rs 120', img: '/assets/images/veg pokora.png', alt: 'Veg Pokora', description: 'Crispy vegetable fritters coated in a light, spiced batter and served hot.' },
   { name: 'Panner Pokora', category: 'Snacks', price: 'Rs 180', img: '/assets/images/panner pokora.png', alt: 'Panner Pokora', description: 'Golden paneer fritters with a crisp outside and a soft, flavourful centre.' },
   { name: 'Thukpa', category: 'Curry', price: 'Rs 180', oldPrice: 'Rs 250', discount: '-28%', img: '/assets/images/thukpa.png', alt: 'Thukpa', description: 'Hearty Tibetan-style noodle soup with fresh vegetables and tender chicken — perfect for cold evenings.' },
