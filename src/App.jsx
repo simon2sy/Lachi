@@ -114,6 +114,8 @@ function App() {
         title="Lachi - Authentic Nepali Flavors in Every Bite!"
         description="Experience authentic Nepali cuisine at Lachi. Enjoy traditional dishes like momo, thukpa, chowmein, and more. Delicious flavors delivered to your doorstep or visit us today!"
         image="/assets/images/hero-banner.png"
+        logo="/assets/images/logo/logo.jpeg"
+        pathname="/"
       />
       <Header
         isNavActive={isNavActive}

@@ -8,6 +8,7 @@ export default function SEO({
   title = 'Lachi - Authentic Nepali Flavors in Every Bite!',
   description = 'Experience authentic Nepali cuisine at Lachi. Enjoy traditional dishes like momo, thukpa, chowmein, and more. Delicious flavors delivered to your doorstep or visit us today!',
   image = '/assets/images/hero-banner.png',
+  logo = '/assets/images/logo/logo.jpeg',
   pathname = '/',
   articlePublishedTime,
   articleModifiedTime,
@@ -17,6 +18,7 @@ export default function SEO({
   const baseUrl = 'https://lachi.com'
   const fullUrl = `${baseUrl}${pathname || '/'}`
   const fullImageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`
+  const fullLogoUrl = logo.startsWith('http') ? logo : `${baseUrl}${logo}`
 
   return (
     <Helmet>
@@ -59,6 +61,10 @@ export default function SEO({
 
       {/* Facebook Profile */}
       <meta property="fb:page_id" content="" />
+
+      {/* Logo for Pinterest and other platforms */}
+      <meta name="p:domain_verify" content="" />
+      <link rel="image_src" href={fullLogoUrl} />
     </Helmet>
   )
 }
